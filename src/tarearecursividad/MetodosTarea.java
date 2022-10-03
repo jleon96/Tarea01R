@@ -64,4 +64,18 @@ public class MetodosTarea {
         }
         return 1;
     }
+    
+    public double calcExponencial(int base, int exponente){
+        if(exponente == 0){ // cualquier numero elevado a la 0 es 1
+            return 1;
+        }else if (exponente == 1){
+            return base;
+        } else if (exponente <0){ // exponete negativo
+            return calcExponencial(base, exponente + 1) / base;
+        }else {
+            
+        }
+        return base * calcExponencial(base, exponente - 1);
+    }
+    
 }
